@@ -1,11 +1,11 @@
 import time
 x = float
 y = float
-result = [None]*2000
+result = [None]*100_000
 print("Array")
-for timeA in range(2000):
+for timeA in range(100_000):
     x = int(round(time.time() * 1_000_000))
-    size = 500_000
+    size = 2_000
     re = [None]*(size - 1)
     for i in range(2,size+1):
         re[i - 2] = i
@@ -19,7 +19,7 @@ for timeA in range(2000):
     # for k in re: 
     #     if k!=0 : print(k)
     result[timeA] = y - x
-    print((str(y - x))+ "uS")
+    # print((str(y - x))+ "uS")
 
 sum_ = 0
 for  d in result: sum_ += d
